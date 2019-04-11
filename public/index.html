@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="js/all.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="bannerArea"></div>
+      <header>
+        <div class="wrap">
+          <div class="logo"><img src="https://www.dahuandesign.com/images/logo.png" alt=""/></div>
+          <div class="menu">
+            <ul>
+              <li><a href="#">關於我們</a></li>
+              <li><a href="#">設計案例</a></li>
+              <li><a href="#">媒體報導</a></li>
+              <li><a href="#">部落格</a></li>
+              <li><a href="#">常見問題</a></li>
+              <li><a href="#">聯絡我們</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="mainArea">
+        <div class="productArea">
+          <div class="wrap">
+            <div class="titleBox">
+              <h2>大桓設計案例<span>DESIGN CASE</span></h2>
+              <div class="note"><a href="">
+                  <p>大桓設計<br>－從收藏的故事中展開設計－<br>陶冶空間<br>領略氣度<br>喬遷新居<br>度假會所<br>樂活退休<br>家，是永遠的避風港<br>是放慢腳步享受與家人的悠閒場域<br>這一次你值得更好的新家]</p>
+                  <div class="btn_more">請點擊了解更多作品</div></a></div>
+            </div>
+            <div class="productList">
+              <div v-for="item in list" class="post"><a :href="item.href">
+                  <div class="item">
+                    <div class="img"><img :src="item.cover" alt=""/></div>
+                    <div class="text">
+                      <h3>{{item.title}}</h3>
+                      <p>{{item.text}}</p>
+                    </div>
+                  </div></a></div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="aboutArea">
+          <div class="wrap">
+            <div class="title">
+              <h2>關於大桓<span>DESIGN CASE</span></h2>
+            </div>
+            <div class="list">
+              <div class="post">
+                <div class="item">
+                  <div class="img"><img src="https://www.dahuandesign.com/upload/ad_list/tw_ad_list_18h29_99ngka8jsy.jpg" alt=""/></div>
+                  <div class="text">
+                    <h3>找一塊地啟動新冒險</h3>
+                    <p>大桓自地自建<br>時間變了，場景也得跟著改變<br>風景不斷的改變，人生下半場從零再出發<br>找一塊地重新啟動一場冒險，<br>這一次給家人更好的家。</p>
+                    <div class="btn_more">請點擊了解更多作品</div>
+                  </div>
+                </div>
+              </div>
+              <div class="post">
+                <div class="item">
+                  <div class="text">
+                    <h3>讓故事走進生活之中</h3>
+                    <p>大桓室內設計<br>從品味故事中啟發設計<br>我們相信好的設計，可以改善人的生活、感情及靈魂。<br>大桓每個設計師畫的設計圖，都包含著對家的熱愛及用心。</p>
+                    <div class="btn_more">請點擊了解更多作品</div>
+                  </div>
+                  <div class="img"><img src="https://www.dahuandesign.com/upload/ad_list/tw_ad_list_18h29_yqfau3cm2j.jpg" alt=""/></div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+        <div class="processArea">
+          <div class="wrap">
+            <div class="title">
+              <h2>DESIGN PROCESS<span>設計流程</span></h2>
+            </div>
+            <ul>
+              <li v-for="item in processArea">
+                <div class="item">
+                  <div class="img"><img :src="item.cover" alt=""/></div>
+                  <div class="text">
+                    <p>{{item.title}}</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div class="btn_more">View More</div>
+          </div>
+        </div>
+        <div class="newsArea">
+          <div class="wrap">
+            <ul>
+              <li v-for="item in news">
+                <div class="item">
+                  <div class="img"><img :src="item.cover" alt=""/></div>
+                  <div class="title"><em>{{item.type}}</em>
+                    <h3>{{item.title}}</h3>
+                  </div>
+                  <div class="text">
+                    <p>{{item.content}}</p>
+                  </div>
+                </div>
+              </li>
+              <div class="clearfix"></div>
+            </ul>
+          </div>
+        </div>
+        <div class="winnerArea">
+          <div class="wrap">
+            <div class="top">
+              <div class="leftItem">
+                <ul>
+                  <li><img src="https://www.dahuandesign.com/upload/ad_winner_list02/tw_ad_winner_list_18h31_xgk7gw6iyb.png" alt=""/></li>
+                  <li><img src="https://www.dahuandesign.com/upload/ad_winner_list02/tw_ad_winner_list_18h31_m5ybs559f4.png" alt=""/></li>
+                  <li><img src="https://www.dahuandesign.com/upload/ad_winner_list02/tw_ad_winner_list_18h31_hjebciy8ft.png" alt=""/></li>
+                  <li><img src="https://www.dahuandesign.com/upload/ad_winner_list02/tw_ad_winner_list_18h31_tn8bct6wcb.png" alt=""/></li>
+                  <li><img src="https://www.dahuandesign.com/upload/ad_winner_list02/tw_ad_winner_list_18h31_gp8fjw82wj.png" alt=""/></li>
+                  <li><img src="https://www.dahuandesign.com/upload/ad_winner_list02/tw_ad_winner_list_18h31_u5hucjkjuy.png" alt=""/></li>
+                  <div class="clearfix"></div>
+                </ul>
+              </div>
+              <div class="rightItem">
+                <div class="title"><em>WINNING RECORDS</em>
+                  <h2>得獎紀錄</h2>
+                </div>
+                <div class="text">
+                  <p>11座歐美大獎的靈魂，是您的故事<br>只有懂您，得獎才能顯得獨特非凡<br>英國倫敦、義大利米蘭、澳洲雪梨、美國舊金山<br>得獎的步伐不停前進，<br>昇華心境界，讓您的生活更美好。</p>
+                  <div class="btn_more">請點擊了解更多作品</div>
+                </div>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="wrap">
+          <div class="itemLeft">
+            <div class="icon"></div>
+            <div class="text"><span>溫馨的家，就從與大桓的溝通開始</span>
+              <div class="tel">
+                <div>幸福啟動專線</div><em>0909699863</em>
+              </div>
+              <address>台中市西屯區福科二路258號</address>
+            </div>
+          </div>
+          <div class="itemRight">
+            <p>先體驗設計，再設計你的家<br>為了讓你放心把家交給我們<br>我們不惜耗費鉅資打造我們理想中的家<br>『實品屋』<br>請立即來電預約參觀！</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

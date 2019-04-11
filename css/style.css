@@ -1,0 +1,480 @@
+a {
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.clearfix {
+  clear: both; }
+
+.wrap {
+  width: 1250px;
+  margin: 0 auto;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+#app {
+  font-family: Microsoft JhengHei; }
+  #app .bannerArea {
+    height: 300px;
+    background: #eee; }
+  #app header {
+    position: relative;
+    width: 100%;
+    z-index: 9999;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5; }
+    #app header .logo {
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      width: 150px;
+      text-align: center; }
+    #app header .menu li {
+      width: 160px;
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      -webkit-transition: .5s;
+      transition: .5s; }
+      #app header .menu li:hover {
+        background: #ddd; }
+        #app header .menu li:hover a {
+          color: #b7985b; }
+      #app header .menu li a {
+        font-weight: 900;
+        position: relative;
+        font-size: 15px;
+        color: #333;
+        letter-spacing: 1px;
+        line-height: 100px;
+        -webkit-transition: .3s;
+        transition: .3s; }
+      #app header .menu li:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        width: 1px;
+        height: 17px;
+        background-color: #dfdfdf; }
+    #app header .menu li:nth-child(3) {
+      margin-right: 250px; }
+      #app header .menu li:nth-child(3):after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+        width: 1px;
+        height: 17px;
+        background-color: #dfdfdf; }
+  #app .mainArea {
+    padding: 90px 0 0;
+    background: none; }
+    #app .mainArea .productArea {
+      position: relative;
+      margin-bottom: 100px; }
+      #app .mainArea .productArea .titleBox {
+        position: relative;
+        margin-bottom: 80px;
+        text-align: center;
+        color: #000; }
+        #app .mainArea .productArea .titleBox h2 {
+          font-size: 30px;
+          letter-spacing: 2px;
+          font-weight: 900;
+          position: relative;
+          margin-bottom: 60px; }
+          #app .mainArea .productArea .titleBox h2 span {
+            font-weight: 500;
+            font-size: 12px;
+            top: -20px;
+            left: 50%;
+            position: absolute;
+            -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%); }
+        #app .mainArea .productArea .titleBox .note {
+          line-height: 1.8; }
+          #app .mainArea .productArea .titleBox .note a {
+            color: #000; }
+      #app .mainArea .productArea .productList .post {
+        float: left;
+        width: 50%;
+        margin-bottom: 30px; }
+        #app .mainArea .productArea .productList .post .item {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+          #app .mainArea .productArea .productList .post .item .img {
+            float: left;
+            width: 50%;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            padding: 0 20px; }
+            #app .mainArea .productArea .productList .post .item .img img {
+              width: 100%;
+              position: relative; }
+              #app .mainArea .productArea .productList .post .item .img img:before {
+                width: 100%;
+                height: 100%;
+                top: 50%;
+                left: 50%;
+                position: absolute;
+                -webkit-transform: translate(-50%, -50%);
+                        transform: translate(-50%, -50%);
+                content: '';
+                z-index: 10;
+                background-color: rgba(210, 178, 129, 0.9);
+                border-radius: 0;
+                opacity: 1;
+                pointer-events: none;
+                -webkit-transition: all .5s ease-in-out;
+                transition: all .5s ease-in-out; }
+          #app .mainArea .productArea .productList .post .item .text {
+            float: left;
+            width: 50%;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
+            padding: 0 20px;
+            color: #333; }
+            #app .mainArea .productArea .productList .post .item .text:hover h3 {
+              color: #b7985b; }
+            #app .mainArea .productArea .productList .post .item .text h3 {
+              font-size: 20px;
+              font-weight: 900;
+              -webkit-transition: .3s;
+              transition: .3s;
+              margin-bottom: 20px; }
+            #app .mainArea .productArea .productList .post .item .text p {
+              font-size: 14px;
+              line-height: 2;
+              letter-spacing: .05em; }
+    #app .mainArea .aboutArea .title {
+      margin-bottom: 100px; }
+      #app .mainArea .aboutArea .title h2 {
+        font-size: 30px;
+        letter-spacing: 2px;
+        font-weight: 900;
+        position: relative;
+        text-align: center;
+        position: relative; }
+        #app .mainArea .aboutArea .title h2 span {
+          font-weight: 500;
+          font-size: 12px;
+          top: -20px;
+          left: 50%;
+          position: absolute;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%); }
+    #app .mainArea .aboutArea .list .post {
+      margin-bottom: 50px; }
+      #app .mainArea .aboutArea .list .post .item {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center; }
+        #app .mainArea .aboutArea .list .post .item .img {
+          float: left;
+          width: 50%; }
+          #app .mainArea .aboutArea .list .post .item .img img {
+            width: 100%; }
+        #app .mainArea .aboutArea .list .post .item .text {
+          float: left;
+          width: 50%;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          padding: 0 50px; }
+          #app .mainArea .aboutArea .list .post .item .text h3 {
+            position: relative;
+            font-size: 26px;
+            display: inline-block;
+            margin-bottom: 50px;
+            color: #333;
+            font-weight: 900; }
+            #app .mainArea .aboutArea .list .post .item .text h3:before {
+              margin-bottom: 5px;
+              content: 'New Adventure New Land';
+              display: block;
+              font-size: 12px;
+              color: #888; }
+          #app .mainArea .aboutArea .list .post .item .text p {
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 2;
+            letter-spacing: 2px;
+            color: #333; }
+          #app .mainArea .aboutArea .list .post .item .text .btn_more {
+            margin-top: 50px; }
+    #app .mainArea .processArea {
+      padding: 50px 0 150px 0;
+      background: url("https://www.dahuandesign.com/images/processBg.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      text-align: center; }
+      #app .mainArea .processArea .title {
+        text-align: center;
+        margin-bottom: 50px; }
+        #app .mainArea .processArea .title h2 {
+          font-size: 12px;
+          color: #fff;
+          position: relative; }
+          #app .mainArea .processArea .title h2 span {
+            margin-top: 5px;
+            font-size: 34px;
+            letter-spacing: 2px;
+            display: block; }
+      #app .mainArea .processArea ul {
+        margin-top: 80px;
+        text-align: center; }
+        #app .mainArea .processArea ul li {
+          width: 16%;
+          display: inline-block; }
+          #app .mainArea .processArea ul li .img {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            z-index: 0;
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            margin-bottom: 35px;
+            border-radius: 50%;
+            background-color: #fff;
+            -webkit-transition: all .3s;
+            transition: all .3s; }
+            #app .mainArea .processArea ul li .img:before {
+              top: 50%;
+              left: 50%;
+              position: absolute;
+              -webkit-transform: translate(-50%, -50%);
+                      transform: translate(-50%, -50%);
+              width: 180px;
+              height: 180px;
+              content: '';
+              z-index: -1;
+              background-color: rgba(255, 255, 255, 0.15);
+              border-radius: 50%; }
+            #app .mainArea .processArea ul li .img:after {
+              top: 50%;
+              left: 50%;
+              position: absolute;
+              -webkit-transform: translate(-50%, -50%);
+                      transform: translate(-50%, -50%);
+              width: 110%;
+              height: 110%;
+              content: '';
+              z-index: -1;
+              background-color: rgba(255, 255, 255, 0.15);
+              border-radius: 50%;
+              opacity: 0; }
+            #app .mainArea .processArea ul li .img img {
+              display: block;
+              max-width: 100%;
+              -webkit-transition: all .5s;
+              transition: all .5s; }
+          #app .mainArea .processArea ul li .text {
+            position: relative;
+            display: block;
+            font-weight: 300;
+            font-size: 20px;
+            letter-spacing: .1em;
+            color: #fff;
+            text-align: center; }
+            #app .mainArea .processArea ul li .text p:after {
+              width: 9px;
+              height: 16px;
+              content: '';
+              position: absolute;
+              right: 0px;
+              top: 50%;
+              -webkit-transform: translateY(-50%);
+                      transform: translateY(-50%);
+              background: url(https://www.dahuandesign.com/images/icon_arrow.png) no-repeat; }
+      #app .mainArea .processArea .btn_more {
+        margin-top: 100px;
+        color: #fff;
+        border-color: #fff;
+        font-size: 18px;
+        padding: 10px 30px; }
+    #app .mainArea .newsArea {
+      -webkit-transform: translateY(-70px);
+              transform: translateY(-70px); }
+      #app .mainArea .newsArea ul li {
+        float: left;
+        width: 33%;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        padding: 0 20px; }
+        #app .mainArea .newsArea ul li .img img {
+          width: 100%; }
+        #app .mainArea .newsArea ul li .title {
+          position: relative;
+          z-index: 1;
+          width: calc(100% - 120px);
+          margin-top: -80px;
+          padding: 20px 10px 20px 15px;
+          background-color: #fff; }
+          #app .mainArea .newsArea ul li .title em {
+            font-size: 14px;
+            color: #666; }
+          #app .mainArea .newsArea ul li .title h3 {
+            margin-top: 5px;
+            font-size: 20px;
+            color: #333;
+            font-weight: 900;
+            white-space: nowrap; }
+        #app .mainArea .newsArea ul li .text {
+          margin-top: 20px;
+          padding-left: 15px; }
+          #app .mainArea .newsArea ul li .text p {
+            height: 50px;
+            font-weight: 300;
+            font-size: 14px;
+            color: #444;
+            line-height: 1.8;
+            letter-spacing: 1px; }
+    #app .mainArea .winnerArea {
+      padding: 100px 0;
+      background: url("https://www.dahuandesign.com/images/bg.jpg"); }
+      #app .mainArea .winnerArea .top .leftItem {
+        float: left;
+        width: 50%; }
+        #app .mainArea .winnerArea .top .leftItem ul li {
+          float: left;
+          width: 33%;
+          height: 150px; }
+      #app .mainArea .winnerArea .top .rightItem {
+        float: left;
+        width: 50%;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+        padding-left: 50px; }
+        #app .mainArea .winnerArea .top .rightItem .title {
+          margin-bottom: 50px; }
+          #app .mainArea .winnerArea .top .rightItem .title em {
+            font-size: 12px;
+            color: #888; }
+          #app .mainArea .winnerArea .top .rightItem .title h2 {
+            margin-top: 5px;
+            font-size: 26px;
+            font-weight: 900;
+            color: #333;
+            letter-spacing: 4px; }
+        #app .mainArea .winnerArea .top .rightItem .text p {
+          margin-bottom: 20px;
+          line-height: 2.2;
+          font-weight: 900;
+          color: #333; }
+  #app footer {
+    padding: 100px 0 170px; }
+    #app footer .itemLeft {
+      float: left;
+      width: 60%; }
+      #app footer .itemLeft .icon {
+        width: 105px;
+        height: 105px;
+        position: relative;
+        display: inline-block;
+        border-radius: 50%;
+        background: url(https://www.dahuandesign.com/images/icon_home.png) no-repeat center center; }
+        #app footer .itemLeft .icon:before {
+          width: 100%;
+          height: 100%;
+          top: 50%;
+          left: 50%;
+          position: absolute;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+          content: '';
+          border: 1px solid #e5e5e5;
+          border-radius: 50%; }
+        #app footer .itemLeft .icon:after {
+          width: 97px;
+          height: 97px;
+          top: 50%;
+          left: 50%;
+          position: absolute;
+          -webkit-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+          content: '';
+          border: 1px solid #d2d2d2;
+          border-radius: 50%; }
+      #app footer .itemLeft .text {
+        padding-left: 30px;
+        display: inline-block;
+        color: #333;
+        -webkit-transform: translateY(-10px);
+                transform: translateY(-10px); }
+        #app footer .itemLeft .text span {
+          font-size: 14px;
+          letter-spacing: 2px; }
+        #app footer .itemLeft .text .tel {
+          font-size: 33px;
+          margin: 15px 0; }
+          #app footer .itemLeft .text .tel div {
+            display: inline-block; }
+          #app footer .itemLeft .text .tel em {
+            padding-left: 20px;
+            color: #cc9900;
+            display: inline-block; }
+        #app footer .itemLeft .text address {
+          font-size: 14px;
+          margin-top: 5px; }
+    #app footer .itemRight {
+      float: left;
+      width: 40%;
+      position: relative;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      padding-left: 50px; }
+      #app footer .itemRight p {
+        -webkit-transform: translateY(-10px);
+                transform: translateY(-10px);
+        line-height: 2;
+        color: #333333;
+        font-weight: 900; }
+      #app footer .itemRight:before {
+        top: 45%;
+        left: -35px;
+        position: absolute;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        width: 1px;
+        height: 100%;
+        content: '';
+        background: #eee; }
+
+.btn_more {
+  border: solid 1px #cc9900;
+  color: #cc9900;
+  display: inline-block;
+  font-size: 24px;
+  position: relative;
+  padding: 5px 10px;
+  margin: 30px 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer; }
+  .btn_more:hover {
+    background: #cc9900;
+    color: #fff; }
+
+/*# sourceMappingURL=style.css.map */
