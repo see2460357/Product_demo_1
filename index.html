@@ -8,31 +8,47 @@
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script src="js/all.js"></script>
   </head>
   <body>
     <div id="app">
-      <div class="bannerArea"></div>
+      <div class="bannerArea">
+        <div class="topSocial"><a href=""><i class="fas fa-phone"></i></a><a href=""><i class="fab fa-line"></i></a><a href=""><i class="fab fa-facebook-messenger"></i></a></div>
+        <div class="wrap">
+          <ul id="banner">
+            <li v-for="item in banner">
+              <div class="img"><img :src="item.cover" alt=""/></div>
+              <div class="text">
+                <h2>{{item.span}}</h2>
+                <p>{{item.p}}</p>
+                <p>{{item.div}}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
       <header>
         <div class="wrap">
-          <div class="logo"><img src="https://www.dahuandesign.com/images/logo.png" alt=""/></div>
+          <div class="logo"><a href="index.html"><img src="https://www.dahuandesign.com/images/logo.png" alt=""/></a></div>
           <div class="menu">
             <ul>
-              <li><a href="#">關於我們</a></li>
-              <li><a href="#">設計案例</a></li>
-              <li><a href="#">媒體報導</a></li>
-              <li><a href="#">部落格</a></li>
-              <li><a href="#">常見問題</a></li>
-              <li><a href="#">聯絡我們</a></li>
+              <li><a href="about.html">關於我們</a></li>
+              <li><a href="interiordesign.html">設計案例</a></li>
+              <li><a href="media.html">媒體報導</a></li>
+              <li><a href="blog.html">部落格</a></li>
+              <li><a href="qusition.html">常見問題</a></li>
+              <li><a href="contact.html">聯絡我們</a></li>
             </ul>
           </div>
         </div>
       </header>
-      <div class="mainArea">
+      <div class="mainArea wow fadeIn">
         <div class="productArea">
           <div class="wrap">
             <div class="titleBox">
@@ -54,13 +70,13 @@
             <div class="clearfix"></div>
           </div>
         </div>
-        <div class="aboutArea">
+        <div class="aboutArea wow fadeIn">
           <div class="wrap">
             <div class="title">
               <h2>關於大桓<span>DESIGN CASE</span></h2>
             </div>
             <div class="list">
-              <div class="post">
+              <div class="post wow fadeIn">
                 <div class="item">
                   <div class="img"><img src="https://www.dahuandesign.com/upload/ad_list/tw_ad_list_18h29_99ngka8jsy.jpg" alt=""/></div>
                   <div class="text">
@@ -70,7 +86,7 @@
                   </div>
                 </div>
               </div>
-              <div class="post">
+              <div class="post wow fadeIn">
                 <div class="item">
                   <div class="text">
                     <h3>讓故事走進生活之中</h3>
@@ -84,7 +100,7 @@
             </div>
           </div>
         </div>
-        <div class="processArea">
+        <div class="processArea wow fadeIn">
           <div class="wrap">
             <div class="title">
               <h2>DESIGN PROCESS<span>設計流程</span></h2>
@@ -102,7 +118,7 @@
             <div class="btn_more">View More</div>
           </div>
         </div>
-        <div class="newsArea">
+        <div class="newsArea wow fadeIn">
           <div class="wrap">
             <ul>
               <li v-for="item in news">
@@ -120,7 +136,7 @@
             </ul>
           </div>
         </div>
-        <div class="winnerArea">
+        <div class="winnerArea wow fadeIn">
           <div class="wrap">
             <div class="top">
               <div class="leftItem">
@@ -134,7 +150,7 @@
                   <div class="clearfix"></div>
                 </ul>
               </div>
-              <div class="rightItem">
+              <div class="rightItem wow fadeIn">
                 <div class="title"><em>WINNING RECORDS</em>
                   <h2>得獎紀錄</h2>
                 </div>
@@ -148,7 +164,7 @@
           </div>
         </div>
       </div>
-      <footer>
+      <footer class="wow fadeIn">
         <div class="wrap">
           <div class="itemLeft">
             <div class="icon"></div>
@@ -164,6 +180,16 @@
           </div>
         </div>
       </footer>
+      <div class="bottomLinkArea">
+        <div class="wrap">
+          <ul>
+            <li>立即來電洽詢<i class="fas fa-phone"></i></li>
+            <li>LINE線上諮詢<i class="fab fa-line"></i></li>
+            <li>FACEBOOK線上諮詢<i class="fab fa-facebook-messenger"></i></li>
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+      </div>
     </div>
   </body>
 </html>

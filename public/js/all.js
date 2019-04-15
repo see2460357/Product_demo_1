@@ -4,7 +4,7 @@ $(document).ready(function () {
   var vm = new Vue({
     el: '#app',
     data: {
-      slider: [{
+      banner: [{
         cover: 'https://www.dahuandesign.com/upload/banner_list/a633e2df00cde9f806e1cb5803274863.jpg',
         href: 'http://www.dahuandesign.com/case/',
         span: '台中室內設計最佳推薦 大桓室內設計',
@@ -100,6 +100,73 @@ $(document).ready(function () {
     },
     methods: {}
   });
-  $('#banner').slick();
+  $('#banner').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    speed: 1200,
+    dots: true,
+    dotsClass: 'dots',
+    cssEase: 'ease-in-out'
+  });
+  $(window).scroll(function () {
+    var vw = $(window).innerWidth();
+    if (scrollY > 400) {
+      $('.bottomLinkArea').addClass('show');
+    } else {
+      $('.bottomLinkArea').removeClass('show');
+    };
+    if (scrollY > 650) {
+      $('header').addClass('head_show');
+    } else {
+      $('header').removeClass('head_show');
+    }
+  });
+  //AJAX page
+  $('nav a').on('click', function (e) {
+    e.preventDefault();
+    var url = this.href;
+
+    $('nav a.current').removeClass('current');
+    $(this).addClass('current');
+
+    $('#container').remove();
+    $('#content').load(url + ' #container').hide().fadeIn('slow');
+  });
+  //Wow.js
+  new WOW().init();
+});
+'use strict';
+
+$(document).ready(function () {
+
+  //AJAX page
+  $('nav a').on('click', function (e) {
+    e.preventDefault();
+    var url = this.href;
+
+    $('nav a.current').removeClass('current');
+    $(this).addClass('current');
+
+    $('#container').remove();
+    $('#content').load(url + ' #container').hide().fadeIn('fast');
+  });
+  // 常見問題選項開關
+  $('ul.faqList').find('h3').click(function () {
+    var _this = $(this);
+    var _li = _this.next();
+    _li.slideToggle('normal', function () {
+      if ($(this).css('display') == 'none') {
+        _this.find('a.toggleOpen').text('+');
+      }
+    });
+    if (_li.css('display') == 'block') {
+      $(this).find('a.toggleOpen').text('-');
+    }
+  }); //ul open End
 });
 //# sourceMappingURL=all.js.map
